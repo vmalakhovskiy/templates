@@ -10,26 +10,24 @@ import Foundation
 
 // MARK: - Output
 
-protocol ___FILEBASENAME___InteractorOutput: class {
-    
-}
+protocol ___FILEBASENAME___Output: class {}
 
 // MARK: - Protocol
 
-protocol ___FILEBASENAMEASIDENTIFIER___Interactor: class {
-    var output: ___FILEBASENAME___InteractorOutput? { get set }
+protocol ___FILEBASENAME___: class {
+    var output: ___FILEBASENAME___Output? { get set }
 }
 
 // MARK: - Implementation
 
-private final class ___FILEBASENAMEASIDENTIFIER___InteractorImpl: ___FILEBASENAMEASIDENTIFIER___Interactor {
-    weak var output: ___FILEBASENAMEASIDENTIFIER___InteractorOutput?
+private final class ___FILEBASENAME___Impl: ___FILEBASENAME___ {
+    weak var output: ___FILEBASENAME___Output?
 }
 
 // MARK: - Factory
 
-class ___FILEBASENAMEASIDENTIFIER___InteractorFactory {
-    static func `default`() -> ___FILEBASENAMEASIDENTIFIER___Interactor {
-        return ___FILEBASENAMEASIDENTIFIER___InteractorImpl()
+final class ___FILEBASENAME___Factory {
+    static func `default`() -> ___FILEBASENAME___ {
+        return ___FILEBASENAME___Impl()
     }
 }

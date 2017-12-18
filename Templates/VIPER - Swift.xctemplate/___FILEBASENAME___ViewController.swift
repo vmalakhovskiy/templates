@@ -8,15 +8,15 @@
 
 import UIKit
 
-// MARK: - ___FILEBASENAMEASIDENTIFIER___ViewController
+// MARK: - Implementation
 
-class ___FILEBASENAMEASIDENTIFIER___ViewController: UIViewController, ___FILEBASENAMEASIDENTIFIER___PresenterOutput {
+class ___FILEBASENAME___: UIViewController, ___VARIABLE_productName:identifier___PresenterOutput {
         
-    private let presenter: ___FILEBASENAMEASIDENTIFIER___Presenter
+    fileprivate let presenter: ___VARIABLE_productName:identifier___Presenter
     
-    init(presenter: ___FILEBASENAMEASIDENTIFIER___Presenter) {
+    init(presenter: ___VARIABLE_productName:identifier___Presenter) {
         self.presenter = presenter
-        super.init(nibName: ___FILEBASENAMEASIDENTIFIER___ViewController.className, bundle: .bundleForCurrentModule())
+        super.init(nibName: ___FILEBASENAME___.className, bundle: .bundleForCurrentModule())
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -32,11 +32,11 @@ class ___FILEBASENAMEASIDENTIFIER___ViewController: UIViewController, ___FILEBAS
 
 // MARK: - Factory
 
-class ___FILEBASENAMEASIDENTIFIER___ViewControllerFactory {
+final class ___FILEBASENAME___Factory {
     static func new(
-        presenter: ___FILEBASENAMEASIDENTIFIER___Presenter
-    ) -> ___FILEBASENAMEASIDENTIFIER___ViewController {
-        let controller = ___FILEBASENAMEASIDENTIFIER___ViewController(presenter: presenter)
+        presenter: ___VARIABLE_productName:identifier___Presenter
+    ) -> ___FILEBASENAME___ {
+        let controller = ___FILEBASENAME___(presenter: presenter)
         presenter.output = controller
         return controller
     }

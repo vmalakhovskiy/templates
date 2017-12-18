@@ -7,26 +7,27 @@
 //
 
 import Foundation
+import UIKit
 
 // MARK: - Protocol
 
-protocol ___FILEBASENAMEASIDENTIFIER___Router {
+protocol ___FILEBASENAME___ {
     
 }
 
 // MARK: - Implementation
 
-private final class ___FILEBASENAMEASIDENTIFIER___RouterImpl: NavigationRouter, ___FILEBASENAMEASIDENTIFIER___Router {
+private final class ___FILEBASENAME___Impl: NavigationRouter, ___FILEBASENAME___ {
     
 }
 
 // MARK: - Factory
 
-class ___FILEBASENAMEASIDENTIFIER___RouterFactory {
+final class ___FILEBASENAME___Factory {
     static func `default`(
         navigationController: UINavigationController
-    ) -> ___FILEBASENAMEASIDENTIFIER___Router {
-        return ___FILEBASENAMEASIDENTIFIER___RouterImpl(
+    ) -> ___FILEBASENAME___ {
+        return ___FILEBASENAME___Impl(
             with: navigationController
         )
     }

@@ -10,28 +10,27 @@ import Foundation
 
 // MARK: - Output
 
-protocol ___FILEBASENAMEASIDENTIFIER___PresenterOutput: class {
-}
+protocol ___VARIABLE_productName:identifier___PresenterOutput: class {}
 
 // MARK: - Protocol
 
-protocol ___FILEBASENAMEASIDENTIFIER___Presenter: class {
-    var output: ___FILEBASENAMEASIDENTIFIER___PresenterOutput? { get set }
+protocol ___FILEBASENAME___: class {
+    var output: ___FILEBASENAME___Output? { get set }
     
     func handleViewIsReady()
 }
 
 // MARK: - Implementation
 
-private final class ___FILEBASENAMEASIDENTIFIER___PresenterImpl: ___FILEBASENAMEASIDENTIFIER___Presenter, ___FILEBASENAMEASIDENTIFIER___InteractorOutput {
+private final class ___FILEBASENAME___Impl: ___FILEBASENAME___, ___VARIABLE_productName:identifier___InteractorOutput {
     
-    private let interactor: ___FILEBASENAMEASIDENTIFIER___Interactor
-    private let router: ___FILEBASENAMEASIDENTIFIER___Router
-    weak var output: ___FILEBASENAMEASIDENTIFIER___PresenterOutput?
+    private let interactor: ___VARIABLE_productName:identifier___Interactor
+    private let router: ___VARIABLE_productName:identifier___Router
+    weak var output: ___FILEBASENAME___Output?
     
     init(
-        interactor: ___FILEBASENAMEASIDENTIFIER___Interactor,
-        router: ___FILEBASENAMEASIDENTIFIER___Router
+        interactor: ___VARIABLE_productName:identifier___Interactor,
+        router: ___VARIABLE_productName:identifier___Router
     ) {
         self.interactor = interactor
         self.router = router
@@ -44,12 +43,12 @@ private final class ___FILEBASENAMEASIDENTIFIER___PresenterImpl: ___FILEBASENAME
 
 // MARK: - Factory
 
-class ___FILEBASENAMEASIDENTIFIER___PresenterFactory {
+final class ___FILEBASENAME___Factory {
     static func `default`(
-        interactor: ___FILEBASENAMEASIDENTIFIER___Interactor = ___FILEBASENAMEASIDENTIFIER___InteractorFactory.default(),
-        router: ___FILEBASENAMEASIDENTIFIER___Router
-    ) -> ___FILEBASENAMEASIDENTIFIER___Presenter {
-        let presenter = ___FILEBASENAMEASIDENTIFIER___PresenterImpl(
+        interactor: ___VARIABLE_productName:identifier___Interactor = ___VARIABLE_productName:identifier___InteractorFactory.default(),
+        router: ___VARIABLE_productName:identifier___Router
+    ) -> ___FILEBASENAME___ {
+        let presenter = ___FILEBASENAME___Impl(
             interactor: interactor,
             router: router
         )

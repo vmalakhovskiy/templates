@@ -3,28 +3,35 @@
 //  ___PROJECTNAME___
 //
 //  Created by ___FULLUSERNAME___ on ___DATE___.
-//___COPYRIGHT___
+//  ___COPYRIGHT___
 //
 
 import Foundation
 import Quick
 import Nimble
+import SwiftyMock
 @testable import ___PROJECTNAME___
 
-class ___FILEBASENAMEASIDENTIFIER___PresenterSpec: QuickSpec {
+class ___FILEBASENAME___: QuickSpec {
     override func spec() {
-        describe("___FILEBASENAMEASIDENTIFIER___Presenter") {
-            var sut: ___FILEBASENAMEASIDENTIFIER___Presenter!
-            var router: Fake___FILEBASENAMEASIDENTIFIER___Router!
-            var interactor: Fake___FILEBASENAMEASIDENTIFIER___Interactor!
-            var output: Fake___FILEBASENAMEASIDENTIFIER___PresenterOutput!
+        describe("___VARIABLE_productName:identifier___Presenter") {
+            var sut: ___VARIABLE_productName:identifier___Presenter!
+            var router: Fake___VARIABLE_productName:identifier___Router!
+            var interactor: Fake___VARIABLE_productName:identifier___Interactor!
+            var output: Fake___VARIABLE_productName:identifier___PresenterOutput!
             
             beforeEach {
-                router = Fake___FILEBASENAMEASIDENTIFIER___Router()
-                interactor = Fake___FILEBASENAMEASIDENTIFIER___Interactor()
-                output = Fake___FILEBASENAMEASIDENTIFIER___PresenterOutput()
-                sut = ___FILEBASENAMEASIDENTIFIER___PresenterFactory.default(interactor: interactor, router: router)
+                router = Fake___VARIABLE_productName:identifier___Router()
+                interactor = Fake___VARIABLE_productName:identifier___Interactor()
+                output = Fake___VARIABLE_productName:identifier___PresenterOutput()
+                sut = ___VARIABLE_productName:identifier___PresenterFactory.default(interactor: interactor, router: router)
                 sut.output = output
+            }
+                
+            describe("when asked to handle that view is ready") {
+                it("should <#expectation#>") {
+                
+                }
             }
             
             describe("when <#behaviour#>") {
@@ -52,14 +59,14 @@ class ___FILEBASENAMEASIDENTIFIER___PresenterSpec: QuickSpec {
     }
 }
 
-class Fake___FILEBASENAMEASIDENTIFIER___Router: ___FILEBASENAMEASIDENTIFIER___Router {
+class Fake___VARIABLE_productName:identifier___Router: ___VARIABLE_productName:identifier___Router {
     
 }
 
-class Fake___FILEBASENAMEASIDENTIFIER___Interactor: ___FILEBASENAMEASIDENTIFIER___Interactor {
-    var output: ___FILEBASENAME___InteractorOutput?
+class Fake___VARIABLE_productName:identifier___Interactor: ___VARIABLE_productName:identifier___Interactor {
+    var output: ___VARIABLE_productName:identifier___InteractorOutput?
 }
 
-class Fake___FILEBASENAMEASIDENTIFIER___PresenterOutput: ___FILEBASENAMEASIDENTIFIER___PresenterOutput {
+class Fake___VARIABLE_productName:identifier___PresenterOutput: ___VARIABLE_productName:identifier___PresenterOutput {
     
 }

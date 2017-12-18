@@ -3,30 +3,31 @@
 //  ___PROJECTNAME___
 //
 //  Created by ___FULLUSERNAME___ on ___DATE___.
-//___COPYRIGHT___
+//  ___COPYRIGHT___
 //
 
 import Foundation
 import Quick
 import Nimble
+import SwiftyMock
 @testable import ___PROJECTNAME___
 
-class ___FILEBASENAMEASIDENTIFIER___ViewControllerSpec: QuickSpec {
+class ___FILEBASENAME___: QuickSpec {
     override func spec() {
-        describe("___FILEBASENAMEASIDENTIFIER___ViewController") {
-            var sut: ___FILEBASENAMEASIDENTIFIER___ViewController!
-            var presenter: Fake___FILEBASENAMEASIDENTIFIER___Presenter!
+        describe("___VARIABLE_productName:identifier___ViewController") {
+            var sut: ___VARIABLE_productName:identifier___ViewController!
+            var presenter: Fake___VARIABLE_productName:identifier___Presenter!
             
             beforeEach() {
-                presenter = Fake___FILEBASENAMEASIDENTIFIER___Presenter()
-                sut = ___FILEBASENAMEASIDENTIFIER___ViewControllerFactory.new(presenter: presenter)
+                presenter = Fake___VARIABLE_productName:identifier___Presenter()
+                sut = ___VARIABLE_productName:identifier___ViewControllerFactory.new(presenter: presenter)
                 _ = sut.view
                 sut.viewDidLoad()
             }
             
             describe("when initialized") {
                 it("should notify presenter about readiness") {
-                    expect(presenter.isViewReadyCalled).to(beTruthy())
+                    expect(presenter.handleViewIsReadyCall.called).to(beTruthy())
                 }
                 
                 it("should have all outlet setup") {
@@ -40,23 +41,23 @@ class ___FILEBASENAMEASIDENTIFIER___ViewControllerSpec: QuickSpec {
                 it("should notify presenter about tap") {
                     sut.<#button name#>.sendActions(for: .touchUpInside)
                     
-                    expect(presenter.is<#button name#>Called).to(beTruthy())
+                    expect(presenter.handle<#button name#>.called).to(beTruthy())
                 }
             }
         }
     }
 }
 
-class Fake___FILEBASENAMEASIDENTIFIER___Presenter: ___FILEBASENAMEASIDENTIFIER___Presenter {
-    var output: ___FILEBASENAMEASIDENTIFIER___PresenterOutput?
+class Fake___VARIABLE_productName:identifier___Presenter: ___VARIABLE_productName:identifier___Presenter {
+    var output: ___VARIABLE_productName:identifier___PresenterOutput?
     
-    var isViewReadyCalled = false
+    let handleViewIsReadyCall = FunctionVoidCall<()>()
     func handleViewIsReady() {
-        isViewReadyCalled = true
+        stubCall(handleViewIsReadyCall, defaultValue: ())
     }
     
-    var is<#button name#>Called = false
+    let handle<#button name#> = FunctionVoidCall<()>()
     func handle<#button name#>() {
-        is<#button name#>Called = true
+        stubCall(handle<#button name#>, defaultValue: ())
     }
 }

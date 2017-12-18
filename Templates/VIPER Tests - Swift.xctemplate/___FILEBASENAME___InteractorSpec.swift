@@ -3,23 +3,24 @@
 //  ___PROJECTNAME___
 //
 //  Created by ___FULLUSERNAME___ on ___DATE___.
-//___COPYRIGHT___
+//  ___COPYRIGHT___
 //
 
 import Foundation
 import Quick
 import Nimble
+import SwiftyMock
 @testable import ___PROJECTNAME___
 
-class ___FILEBASENAME___InteractorSpec: QuickSpec {
+class ___FILEBASENAME___: QuickSpec {
     override func spec() {
-        describe("___FILEBASENAME___Interactor") {
-            var sut: ___FILEBASENAME___Interactor!
-            var output: Fake___FILEBASENAME___InteractorOutput!
+        describe("___VARIABLE_productName:identifier___Interactor") {
+            var sut: ___VARIABLE_productName:identifier___Interactor!
+            var output: Fake___VARIABLE_productName:identifier___InteractorOutput!
             
             beforeEach {
-                output = Fake___FILEBASENAME___InteractorOutput()
-                sut = ___FILEBASENAMEASIDENTIFIER___InteractorFactory.default()
+                output = Fake___VARIABLE_productName:identifier___InteractorOutput()
+                sut = ___VARIABLE_productName:identifier___InteractorFactory.default()
                 sut.output = output
             }
             
@@ -48,6 +49,6 @@ class ___FILEBASENAME___InteractorSpec: QuickSpec {
     }
 }
 
-class Fake___FILEBASENAME___InteractorOutput: ___FILEBASENAME___InteractorOutput {
+class Fake___VARIABLE_productName:identifier___InteractorOutput: ___VARIABLE_productName:identifier___InteractorOutput {
     
 }
