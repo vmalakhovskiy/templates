@@ -10,7 +10,7 @@ import UIKit
 
 // MARK: View
 
-class ___VARIABLE_view:identifier___: UIView {
+final class ___VARIABLE_view:identifier___: UIView {
     
     func populate(with viewModel: ___VARIABLE_viewModel:identifier___) {
         
@@ -19,7 +19,7 @@ class ___VARIABLE_view:identifier___: UIView {
 
 // MARK: Factory
 
-class ___VARIABLE_viewFactory:identifier___ {
+final class ___VARIABLE_viewFactory:identifier___ {
     static func new(with bundle: Bundle? = nil, owner: Any? = nil, options: [AnyHashable: Any]? = nil) -> ___VARIABLE_view:identifier___? {
         return UINib(nibName: "___VARIABLE_view:identifier___", bundle: nil).instantiate(withOwner: owner, options: options).first as? ___VARIABLE_view
     }

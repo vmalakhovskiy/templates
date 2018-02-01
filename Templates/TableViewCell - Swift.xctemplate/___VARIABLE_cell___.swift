@@ -10,7 +10,7 @@ import UIKit
 
 class ___VARIABLE_cell:identifier___: UITableViewCell {
     
-    func populate(with viewModel: <#ViewModel#>) {
+    func populate(with viewModel: ___VARIABLE_viewModel:identifier___) {
         
     }
     

@@ -3,7 +3,7 @@
 //  ___PROJECTNAME___
 //
 //  Created by ___FULLUSERNAME___ on ___DATE___.
-//___COPYRIGHT___
+//  ___COPYRIGHT___
 //
 
 import Foundation
@@ -16,13 +16,13 @@ protocol ___VARIABLE_protocol:identifier___ {
 
 // MARK: Implementation
 
-private class ___VARIABLE_implementation:identifier___: ___VARIABLE_protocol:identifier___ {
+private final class ___VARIABLE_implementation:identifier___: ___VARIABLE_protocol:identifier___ {
 
 }
 
 // MARK: Factory
 
-class ___VARIABLE_factory:identifier___ {
+final class ___VARIABLE_factory:identifier___ {
     static func `default`() -> ___VARIABLE_protocol:identifier___ {
         return ___VARIABLE_implementation:identifier___()
     }
